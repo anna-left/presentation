@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>reveal.js - Slide Transitions</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/default.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js"></script>
+	<script>
+		hljs.initHighlightingOnLoad('js', 'html', 'css');
+	</script>
+	<link rel="stylesheet" href="../dist/reveal.css">
+	<link rel="stylesheet" href="../dist/theme/white.css" id="theme">
+	<!-- <style type="text/css" media="screen">
+			.slides section.has-dark-background,
+			.slides section.has-dark-background h3 {
+				color: #fff;
+			}
+			.slides section.has-light-background,
+			.slides section.has-light-background h3 {
+				color: #222;
+			}
+		</style> -->
+	<link rel="stylesheet" href="../dist/theme/myPresentation.css">
+</head>
+
+<body>
+
+	<div class="reveal">
+
+		<div class="slides">
+
+			<section>
+				<h1>SVG</h1>
+				<img class="rss" src="../dist/theme/svg-logo-v.svg" alt="">
+			</section>
+
+			<section>
+				<h3>What is SVG?</h3>
+				<ul>
+					<li>SVG - Scalable Vector Graphics</li>
+					<li>SVG is a W3C recommendation</li>
+					<li>SVG is used to define vector-based graphics for the Web</li>
+					<li>SVG integrates with other W3C</li>
+					<li>SVG defines the graphics in XML format</li>
+					<li>SVG files can be animated</li>
+				</ul>
+			</section>
+
+			<section>
+				<h3>Advantages</h3>
+				<div class="advantages">
+					<img class="rss" src="../dist/theme/Scaling.png" alt="logo">
+					<ul>
+						<li>Scaling</li>
+						<li>Small size</li>
+						<li>Reducing HTTP Requests</li>
+						<li>Styling and scripting</li>
+						<li>Animation and Editing</li>
+
+					</ul>
+				</div>
+			</section>
+
+			<section>
+				<h3>Creating SVG Images</h3>
+				<ul>
+					<li>CorelDRAW</li>
+					<li>Adobe Illustrator</li>
+					<li>Adobe InDesign</li>
+					<li>Inkscape</li>
+					<li>Animation and Editing</li>
+				</ul>
+			</section>
+
+			<section>
+				<h3>SVG Shapes</h3>
+				<ul>
+					<li>Circle</li>
+					<li>Ellipse</li>
+					<li>Rectangle</li>
+					<li>Polygon</li>
+					<li>Line</li>
+					<li>Polyline</li>
+					<li>Path</li>
+				</ul>
+			</section>
+
+			<section>
+				<h5>Circle</h5>
+				<svg width="100" height="100">
+					<circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+				</svg>
+				<pre><code class="language-html">&lt;svg width="100" height="100"&gt;
+	&lt;circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow"/&gt;
+&lt;/svg&gt; </code></pre>
+
+				<h5>Ellipse</h5>
+				<svg width="210" height="110">
+					<ellipse cx="105" cy="55" rx="100" ry="50" style="fill:#00ebff;stroke:purple;stroke-width:2" />
+				</svg>
+				<pre><code class="language-html">&lt;svg width="210" height="110"&gt;
+	&lt;ellipse cx="105" cy="55" rx="100" ry="50" style="fill:#00ebff;stroke:purple;stroke-width:2"/&gt;
+&lt;/svg&gt; </code></pre>
+			</section>
+
+			<section>
+				<h5>Rectangle</h5>
+				<svg width="304" height="84">
+					<rect width="300" height="80" style="fill:rgb(0,0,255);
+								stroke-width:2;stroke:rgb(0,0,0)" />
+				</svg>
+
+				<pre><code class="language-html">&lt;svg width="304" height="84"&gt;
+	&lt;rect width="300" height="80" style="fill:#00ffad;stroke-width:2;stroke:rgb(0,0,0)"/&gt;
+&lt;/svg&gt; </code></pre>
+
+				<h5>Polygon</h5>
+				<svg height="120" width="400">
+					<polygon points="200,10 280,120 90,90" style="fill:#00ffad;stroke:purple;stroke-width:1"></polygon>
+				</svg>
+				<pre><code class="language-html">&lt;svg width="120" height="400"&gt;
+	&lt;polygon points="200,10 280,120 90,90" style="fill:lime;stroke:purple;stroke-width:1"/&gt;
+&lt;/svg&gt; </code></pre>
+
+			</section>
+
+			<section>
+				<h5>Line</h5>
+				<svg width="100" height="100">
+					<line x1="0" y1="0" x2="100" y2="100" style="stroke:rgb(146, 49, 238);stroke-width:4" />
+				</svg>
+				<pre><code class="language-html">&lt;svg width="210" height="210"&gt;
+	&lt;line x1="0" y1="0" x2="200" y2="200" style="stroke:rgb(146, 49, 238);stroke-width:4"/&gt;
+&lt;/svg&gt; </code></pre>
+
+				<h5>Polyline</h5>
+				<svg width="125" height="125">
+					<polyline points="0,4 40,4 40,44 80,44 80,84 120,84 120,124" style="fill:none;stroke:red;stroke-width:4" />
+				</svg>
+				<pre><code class="language-html">&lt;svg width="125" height="160"&gt;
+	&lt;polyline points="0,40 40,40 40,80 80,80 80,120 120,120 120,160" style="fill:none;stroke:red;stroke-width:4"/&gt;
+&lt;/svg&gt; </code></pre>
+			</section>
+
+			<section>
+				<h3>SVG effects</h3>
+				<ul>
+					<li>SVG Gradients – Linear</li>
+					<li>SVG Gradients - Radial</li>
+					<li>SVG Stroke</li>
+					<li>SVG Filters</li>
+					<li>SVG Blur Effects</li>
+					<li>SVG Drop Shadows</li>
+				</ul>
+			</section>
+				
+			<section>
+				<h3>Gradient</h3>
+				<div class="gradient-examples">
+					<div class="gradient-ex">
+						<svg height="150" width="200">
+							<defs>
+								<linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+									<stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+									<stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+								</linearGradient>
+							</defs>
+							<ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
+						</svg>
+
+						<pre class="gradient-ex-pre"><code class="language-html">&lt;svg width="150" height="200"&gt;
+	&lt;defs&gt;
+	  &lt;linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%"&gt;
+	    &lt;stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" /&gt;
+	    &lt;stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" /&gt;
+	  &lt;/linearGradient&gt;
+	&lt;/defs&gt;
+	&lt;ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" /&gt;
+&lt;/svg&gt; </code></pre>
+					</div>
+				
+					<div class="gradient-ex">
+						<svg height="150" width="200">
+							<defs>
+								<linearGradient id="grad2" x1="0%" y1="0%" x2="0%" y2="100%">
+									<stop offset="0%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+									<stop offset="100%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+								</linearGradient>
+							</defs>
+							<ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad2)" />
+						</svg>
+
+<pre class="gradient-ex-pre"><code class="language-html">&lt;svg width="150" height="200"&gt;
+	&lt;defs&gt;
+		&lt;id="grad2" x1="0%" y1="0%" x2="0%" y2="100%"&gt;
+			&lt;stop offset="0%" style="stop-color:rgb(255,0,0);stop-opacity:1" /&gt;
+			&lt;stop offset="100%" style="stop-color:rgb(255,255,0);stop-opacity:1" /&gt;
+		&lt;/linearGradient&gt;
+	&lt;/defs&gt;
+	&lt;ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" /&gt;
+&lt;/svg&gt; </code></pre>
+
+					</div>
+					<div class="gradient-ex">
+						<svg height="150" width="200">
+							<defs>
+								<linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="0%">
+									<stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+									<stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+								</linearGradient>
+							</defs>
+							<ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad3)" />
+							<text fill="#ffffff" font-size="45" font-family="Verdana" x="50" y="86">
+								SVG</text>
+						</svg>
+
+<pre class="gradient-ex-pre"><code class="language-html">&lt;svg width="150" height="200"&gt;
+	&lt;defs&gt;
+		&lt;linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%"&gt;
+			&lt;stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" /&gt;
+			&lt;stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" /&gt;
+		&lt;/linearGradient&gt;
+	&lt;/defs&gt;
+	&lt;ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" /&gt;
+&lt;/svg&gt; </code></pre>
+					</div>
+				</div>
+			</section>
+			
+			<section>
+				<svg width="100%" height="600px">
+					<g id="R1" transform="translate(250 250)">
+						<ellipse rx="100" ry="0" opacity=".3">
+							<animateTransform attributeName="transform" type="rotate" dur="7s" from="0" to="360" repeatCount="indefinite" />
+							<animate attributeName="cx" dur="8s" values="-20; 220; -20" repeatCount="indefinite" />
+							<animate attributeName="ry" dur="3s" values="10; 60; 10" repeatCount="indefinite" />
+						</ellipse>
+					</g>
+					<use xlink:href="#R1" transform="rotate(72 390 150)" />
+					<use xlink:href="#R1" transform="rotate(144 390 150)" />
+					<use xlink:href="#R1" transform="rotate(216 390 150)" />
+					<use xlink:href="#R1" transform="rotate(288 390 150)" />
+				</svg>
+			</section>
+			
+			<section>				<p> I wish you success in your studies! </p>
+				<p> Thank you for your attention ) </p>
+				<img class="rss" src="../dist/theme/rs_school.svg" alt="logo">
+			</section>
+		</div>
+	</div>
+
+	<script src="../dist/reveal.js"></script>
+	<script>
+		Reveal.initialize({
+			center: true,
+			history: true,
+
+			// transition: 'slide',
+			// transitionSpeed: 'slow',
+			// backgroundTransition: 'slide'
+		});
+	</script>
+
+</body>
+
+</html>
